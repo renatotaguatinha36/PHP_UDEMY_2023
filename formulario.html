@@ -8,20 +8,36 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
     <form action="processa.php" method="post" class="form-control">
- <div class="mb-4">       
-<label class="form-label">Nome: </label>
-<input type=text name=nome class="form-control"><br>
+ <div class="col-4">       
+   <label class="form-label">Nome: </label>
+   <input type=text name=nome class="form-control"><br>
 </div>
-<div class="mb-4"> 
+<div class="col-4"> 
 <label class="form-label">Email:</label>
  <input type=text name=email class="form-control"><br><br>
 </div>
-<div class="mb-4">
+<div class="col-4">
 <label class="form-label">Mensagem: </label> 
 <textarea name=mensagem cols=8 rows=3 class="form-control"></textarea><br>
 </div>
+<select name=processador>
+    <option value=Pentium>Pentium</option>
+    <option value=AMD>AMD</option>
+    <option value=Celeron>Celeron</option>
+    </select><BR><BR>
+    <B>Livros que deseja comprar?</B><br>
+    Obs: segure "CTRL" para selecionar mais de um.<BR>
+    <select name="livros[]" multiple>
+    <option value="Biblia do PHP 4">Biblia do PHP 4</option>
+    <option value="PHP Professional">PHP Professional</option>
+    <option value="Iniciando em PHP">Iniciando em PHP</option>
+    <option value="Novidades do PHP 5">Novidades do PHP 5</option>
+    <option value="Biblia do MySQL">Biblia do MySQL</option>
+    </select><BR><BR>
 <input type=submit class="btn btn-success">
 </form>
+</div>
 </body>
 </html>
